@@ -1,10 +1,13 @@
 class Solution {
 public:
     string toLowerCase(string s) {
-        for(int i=0;i<s.length();i++){
+       int i=0,j=s.length()-1;
+        while(i<=j){
             s[i]=tolower(s[i]);
+            s[j]=tolower(s[j]);
+            i++;
+            j--;
         }
-        cout<<s;
         return s;
     }
 };
