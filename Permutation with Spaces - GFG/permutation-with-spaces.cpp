@@ -17,14 +17,14 @@ vector<string> ans;
        op1.push_back(' ');
        op1.push_back(ip[0]);
        op2.push_back(ip[0]);
-       ip.erase(ip.begin()+0);
+       ip.erase(ip.begin());
        solve(ip,op1);
        solve(ip,op2);
    }
     vector<string> permutation(string ip){
        string op;
        op.push_back(ip[0]);
-       ip.erase(ip.begin()+0);
+       ip.erase(ip.begin());
        solve(ip,op);
        return ans;
     }
