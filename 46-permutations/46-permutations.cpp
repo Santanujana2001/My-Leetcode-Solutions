@@ -11,7 +11,6 @@ public:
             ans(nums,k+1);
             swap(nums[i],nums[k]);
         }
-        return;
     }
     vector<vector<int>> permute(vector<int>& nums) {
         ans(nums,0);
