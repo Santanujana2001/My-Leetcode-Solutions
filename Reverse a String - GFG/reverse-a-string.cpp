@@ -28,8 +28,14 @@ int main() {
 
 
 //User function Template for C++
-
+void solve(string &str,int i,int j){
+    if(i>=j){
+        return;
+    }
+    swap(str[i],str[j]);
+    solve(str,i+1,j-1);
+}
 string reverseWord(string str){
-    reverse(str.begin(),str.end());
+    solve(str,0,str.length()-1);
   return str;
 }
