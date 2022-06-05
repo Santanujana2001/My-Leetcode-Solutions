@@ -19,9 +19,11 @@ class Solution
             long long curr_mod= a[i]%k;
             if(curr_mod==0){
                 ans+= mp[0];
+                // cout<<mp[0]<<endl;
             } else{
                 long long req_mod= k-a[i]%k;
                 ans+= mp[req_mod];
+                // cout<<mp[req_mod]<<endl;
             }
             mp[curr_mod]++;
         }
