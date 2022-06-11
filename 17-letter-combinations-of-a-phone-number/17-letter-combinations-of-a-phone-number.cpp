@@ -25,7 +25,6 @@ class Solution
             return ans;
         }
         string out;
-        int ind = 0;
         string mapp[10] = { "",
             "",
             "abc",
@@ -36,7 +35,7 @@ class Solution
             "pqrs",
             "tuv",
             "wxyz" };
-        solve(digits, out, ind, ans, mapp);
+        solve(digits, out, 0, ans, mapp);
         return ans;
     }
 };
