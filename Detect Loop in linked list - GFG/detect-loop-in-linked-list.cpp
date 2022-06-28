@@ -53,7 +53,7 @@ class Solution
     }
     Node * i=head;
     Node *j=head;
-    while(j!=NULL && j->next!=NULL){
+    while(j && j->next){
         i=i->next;
         j=j->next->next;
         if(i==j){
