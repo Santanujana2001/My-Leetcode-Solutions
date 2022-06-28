@@ -1,11 +1,13 @@
 class ParkingSystem {
 public: int b,m,s;
+//     Storing The Data Basically
     ParkingSystem(int big, int medium, int small) {
         b=small;
         m=medium;
         s=big;
     }
-    
+//     Checking If The Slot Is Avilable Or Not And If It's Avilable Then Decrement Slot By 1 And Return True;
+//     Otherwise Return False;
     bool addCar(int carType) {
         if(carType==1 && s){
             s--;
