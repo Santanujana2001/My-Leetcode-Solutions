@@ -7,9 +7,11 @@ public:
             return;
         }
         if(n>k){
+            cout<<n<<"f"<<endl;
             solve(n-1,k,cm);
         }
         cm.push_back(n);
+        cout<<n<<"s"<<endl;
         solve(n-1,k-1,cm);
         return;
     }
