@@ -5,7 +5,7 @@
 
 <p><span style="font-size:18px">Raju is in an elevator. Given by his teacher is an array of size N which denotes the number of floors and has a 1 based indexing. The elevator starts from the ground and moves up and down, X and Y floors respectively. There is a code used in the elevator according to which it moves up X floors given at odd indexes of the array and moves down Y floors given at even indexes of the array. He is asked to go to the highest floor possible. Help him to sort the array such that he reaches the highest floor after traversing the whole array from starting till the end, without skipping any index.</span></p>
 
-<p><span style="font-size:18px">He always prefers to move more number of floors up and less number of floors down. Once he gets into the elevator, the elevator should not reach the ground again, if it does print Not Possible.</span></p>
+<p><span style="font-size:18px">He always prefers to move more number of floors up and less number of floors down. Once he gets into the elevator, the elevator should not reach the ground again, if it does return -1.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
