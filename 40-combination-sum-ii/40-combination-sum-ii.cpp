@@ -1,5 +1,6 @@
 class Solution {
 public:
+//     striver is awesome
     vector<vector<int>>v;
     void solve(int ind,vector<int>& c, int target,vector<int>temp){
         if(target==0){
