@@ -17,6 +17,7 @@ class Solution
                 prev1 = cur;
             }
             return prev1;
+//             solve function is from striver's lecture
         }
     int rob(vector<int> &nums)
     {
@@ -38,5 +39,6 @@ class Solution
             }
         }
         return max(solve(last), solve(first));
+//         rob function is from striver's house robber
     }
 };
