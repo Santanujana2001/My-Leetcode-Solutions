@@ -1,29 +1,39 @@
-class Solution {
-public:
-    int solve(int i,int j,vector<vector<int>> &matrix,vector<vector<int>>&dp){
-    if(j<0||j>=matrix[0].size()){
-        return 1e9;
-    }
-    if(i==0){
-        return matrix[i][j];
-    } 
-    if(dp[i][j]!=-1){
-        return dp[i][j];
-    }
-    int up = matrix[i][j] + solve(i-1,j,matrix,dp);
-    int leftdg = matrix[i][j] + solve(i-1,j-1,matrix,dp);
-    int rightdg = matrix[i][j] + solve(i-1,j+1,matrix,dp);
-    return dp[i][j]=min(up,min(leftdg,rightdg));
-}
-int minFallingPathSum(vector<vector<int>> &matrix)
+class Solution
 {
-     int n=matrix.size();
-    int m=matrix[0].size();
-    vector<vector<int>>dp(n,vector<int>(m,-1));
-    int mini=1e9;
-    for(int i=0;i<m;i++){
-        mini=min(mini,solve(n-1,i,matrix,dp));
-    }
-    return mini;
-}
+    public:
+        int minFallingPathSum(vector<vector < int>> &matrix)
+        {
+
+            int n = matrix.size();
+            int m = matrix[0].size();
+            vector<int> prev(m, 0), cur(m, 0);
+            for (int i = 0; i < m; i++)
+            {
+                prev[i] = matrix[0][i];
+            }
+            for (int i = 1; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    int up = matrix[i][j] + prev[j];
+                    int ldg = 1e9, rdg = 1e9;
+                    if (j > 0)
+                    {
+                        ldg = matrix[i][j] + prev[j - 1];
+                    }
+                    if (j < m - 1)
+                    {
+                        rdg = matrix[i][j] + prev[j + 1];
+                    }
+                    cur[j] = min(up, min(ldg, rdg));
+                }
+                prev = cur;
+            }
+            int mini = 1e9;
+            for (int i = 0; i < m; i++)
+            {
+                mini = min(mini, prev[i]);
+            }
+            return mini;
+        }
 };
